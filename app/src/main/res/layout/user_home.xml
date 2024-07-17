@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserHome"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/gps_warning"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="bottom"
+        android:layout_marginBottom="-30dp"
+        android:background="#F10000"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="GPS not enable . Click here to enable it" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/connection_warning"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="-30dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="#F10000"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:text="Offline Mode" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="40dp"
+        android:gravity="fill_horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textColor="?android:textColorPrimary"
+                android:text="Welcome Back" />
+            <TextView
+                android:id="@+id/fullName"
+                android:layout_width="270dp"
+                android:layout_height="60dp"
+                android:textAlignment="textStart"
+                android:layout_marginTop="-15dp"
+                android:textSize="38sp"
+                android:textColor="?android:textColorPrimary"
+                android:text="Md Sazzadul Islam" />
+
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/profileButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:src="@drawable/avater" />
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:visibility="visible"
+                map:cardCornerRadius="20dp"
+                >
+                <fragment
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:background="@drawable/shape"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:layout_width="220dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="9sp"
+                            android:text="Latitude" />
+
+                        <TextView
+                            android:id="@+id/latitude"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="?android:textColorPrimaryDisableOnly"
+                            android:layout_marginTop="-5dp"
+                            android:textSize="20sp"
+                            android:text="Latitude" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="9sp"
+                            android:text="Longitude" />
+
+                        <TextView
+                            android:id="@+id/longitude"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="?android:textColorPrimaryDisableOnly"
+                            android:layout_marginTop="-5dp"
+                            android:textSize="20sp"
+                            android:text="Longitude" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/speed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="40sp"
+                        android:textStyle="bold"
+                        android:textColor="?android:textColorPrimaryDisableOnly"
+                        android:text="100" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="-10dp"
+                        android:text="Speed" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="left"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:textColor="?android:textColorPrimaryDisableOnly"
+                        android:text="Services"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginTop="-10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/emergencyButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:scaleType="fitCenter"
+                            android:padding="15dp"
+                            android:background="@drawable/shape"
+                            android:src="@drawable/emergency" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginTop="-5dp"
+                            android:textSize="12sp"
+                            android:textColor="?android:textColorPrimaryDisableOnly"
+                            android:text="Emergency Help" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/safetyCheckInButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:scaleType="fitCenter"
+                            android:padding="15dp"
+                            android:background="@drawable/shape"
+                            android:src="@drawable/checkin" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_marginTop="-5dp"
+                            android:textSize="12sp"
+                            android:textColor="?android:textColorPrimaryDisableOnly"
+                            android:text="Safety Check In" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/helpLineButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:scaleType="fitCenter"
+                            android:padding="15dp"
+
+                            android:background="@drawable/shape"
+                            android:src="@drawable/helpline" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginTop="-5dp"
+                            android:textSize="12sp"
+                            android:textColor="?android:textColorPrimaryDisableOnly"
+                            android:text="HelpLine" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/phoneModule"
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:background="@drawable/shape"
+                            android:padding="15dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/smartphone" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginTop="-5dp"
+                            android:textSize="12sp"
+                            android:textColor="?android:textColorPrimaryDisableOnly"
+                            android:text="Phone Module" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/family"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:scaleType="fitCenter"
+                            android:padding="15dp"
+                            android:background="@drawable/shape"
+                            android:src="@drawable/family" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginTop="-5dp"
+                            android:textSize="12sp"
+                            android:textColor="?android:textColorPrimaryDisableOnly"
+                            android:text="Family" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/railTracking"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:scaleType="fitCenter"
+                            android:padding="15dp"
+                            android:background="@drawable/shape"
+                            android:src="@drawable/rail" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginTop="-5dp"
+                            android:textSize="12sp"
+                            android:textColor="?android:textColorPrimaryDisableOnly"
+                            android:text="Rail Tracking" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/adminAds"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:gravity="center"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="left"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:textColor="?android:textColorPrimaryDisableOnly"
+                        android:text="Explore More"
+                                                />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/adminArticle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

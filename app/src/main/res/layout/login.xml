@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/material_on_primary_disabled"
+    android:gravity="top"
+    tools:context=".Login"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:orientation="vertical"
+        android:backgroundTint="@color/teal_200"
+        android:padding="20dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/register"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="200dp"
+                android:gravity="right"
+                android:layout_weight="1"
+                android:text="Register"
+                android:textColor="?android:textColorPrimaryDisableOnly"
+                android:background="#00000000"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Sign In"
+            android:textColor="?android:textColorPrimaryDisableOnly"
+            android:textSize="50sp"
+            android:fontFamily="sans-serif-medium"
+            />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textColor="?android:textColorPrimaryDisableOnly"
+            android:text="@string/sign_in_intro" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:gravity="right"
+        android:background="@drawable/transparent_shape">
+
+        <EditText
+            android:id="@+id/login_nid"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/round_textinput"
+            android:ems="10"
+            android:hint="National I'd"
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp" />
+
+        <EditText
+            android:id="@+id/login_password"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/round_textinput"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingLeft="20dp" />
+
+        <Button
+            android:id="@+id/forget_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="Forget Password"
+            android:textSize="10dp"
+            android:textColor="@color/black"
+            android:background="#00000000"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/login"
+            android:layout_gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/round_button_black"
+            android:textColor="?android:textColorPrimaryInverse"
+            android:textSize="17dp"
+            android:text="Sign In" />
+    </LinearLayout>
+
+
+</LinearLayout>
