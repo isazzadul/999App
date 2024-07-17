@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "323900107570",
+    "firebase_url": "https://emergency-app-8c07d-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "emergency-app-8c07d",
+    "storage_bucket": "emergency-app-8c07d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:323900107570:android:5319c6f2c4da9ce2b5452b",
+        "android_client_info": {
+          "package_name": "com.aibrains.emergency"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "323900107570-i5pk0gnd4qt8fft4t2afhar7nl72qbno.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aibrains.emergency",
+            "certificate_hash": "494e20ad0c24540d2cd6f87bbd8c1c55e9b4d013"
+          }
+        },
+        {
+          "client_id": "323900107570-6o39gcj90uut48k36bha150pdvkqgcp0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5wmjdwJkE8EuObHQ6J_k8JISoXQEo758"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "323900107570-6o39gcj90uut48k36bha150pdvkqgcp0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Family.AddToFamily">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:layout_marginBottom="-10dp"
+                android:backgroundTint="@color/teal_200"
+                >
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_weight=".4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Add to your family"
+                    android:textStyle="bold"
+                    android:textColor="?android:textColorPrimaryDisableOnly"
+                    android:textSize="40sp"
+                    android:fontFamily="sans-serif-medium"
+                    />
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/animationView"
+                    android:layout_weight=".6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:lottie_rawRes="@raw/add"
+                    app:lottie_autoPlay="true"
+                    app:lottie_speed=".7"
+                    app:lottie_loop="true"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:padding="20dp"
+                android:layout_height="wrap_content"
+                android:textColor="?android:textColorPrimaryDisableOnly"
+                android:text="Enter User ID of your family member to add into your family" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:orientation="vertical"
+            >
+
+            <EditText
+                android:id="@+id/af_userid"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round_textinput"
+                android:ems="10"
+                android:hint="User ID"
+                android:inputType="textPersonName"
+                android:paddingLeft="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/af_submit"
+                    android:layout_width="170dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/round_button_black"
+                    android:textColor="?android:textColorPrimaryInverse"
+                    android:textSize="17dp"
+                    android:text="Submit" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    tools:context=".UserHome"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:gravity="fill_horizontal"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textColor="?android:textColorPrimary"
+                android:text="Welcome Back" />
+            <TextView
+                android:id="@+id/adminFullName"
+                android:layout_width="270dp"
+                android:layout_height="60dp"
+                android:textAlignment="textStart"
+                android:layout_marginTop="-8dp"
+                android:textSize="38sp"
+                android:textColor="?android:textColorPrimary"
+                android:text="" />
+
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/adminProfileButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:src="@drawable/avater" />
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:visibility="gone"
+                map:cardCornerRadius="20dp"
+                >
+                <fragment
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:background="@drawable/shape"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:layout_width="220dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="9sp"
+                            android:text="Latitude" />
+
+                        <TextView
+                            android:id="@+id/latitude"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="?android:textColorPrimaryDisableOnly"
+                            android:layout_marginTop="-5dp"
+                            android:textSize="20sp"
+                            android:text="Latitude" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="9sp"
+                            android:text="Longitude" />
+
+                        <TextView
+                            android:id="@+id/longitude"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="?android:textColorPrimaryDisableOnly"
+                            android:layout_marginTop="-5dp"
+                            android:textSize="20sp"
+                            android:text="Longitude" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/speed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="40sp"
+                        android:textStyle="bold"
+                        android:textColor="?android:textColorPrimaryDisableOnly"
+                        android:text="100" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="-10dp"
+                        android:text="Speed" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="left"
+                        android:textSize="19sp"
+                        android:layout_margin="5dp"
+                        android:textStyle="bold"
+                        android:textColor="?android:textColorPrimaryDisableOnly"
+                        android:text="Services"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginTop="-5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/adminEmergencyButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:scaleType="fitCenter"
+                            android:padding="15dp"
+                            android:background="@drawable/shape_icon_gray"
+                            android:src="@drawable/emergency" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:textColor="?android:textColorPrimaryDisableOnly"
+                            android:text="Emergency Help" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/adminAmbulanceButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:scaleType="fitCenter"
+                            android:padding="15dp"
+                            android:background="@drawable/shape_icon_gray"
+                            android:src="@drawable/ambulance" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:textColor="?android:textColorPrimaryDisableOnly"
+                            android:text="Ambulance" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/adminFireServiceButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:scaleType="fitCenter"
+                            android:padding="15dp"
+
+                            android:background="@drawable/shape_icon_gray"
+                            android:src="@drawable/firefighter" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:textColor="?android:textColorPrimaryDisableOnly"
+                            android:text="Fire Brigade" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/adminMapView"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:scaleType="fitCenter"
+                            android:padding="15dp"
+                            android:background="@drawable/shape_icon_gray"
+                            android:src="@drawable/mapview" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+
+                            android:textSize="12sp"
+                            android:textColor="?android:textColorPrimaryDisableOnly"
+                            android:text="Map View" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/adminAllList"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:scaleType="fitCenter"
+                            android:padding="15dp"
+                            android:background="@drawable/shape_icon_gray"
+                            android:src="@drawable/allrequest" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+
+                            android:textSize="12sp"
+                            android:textColor="?android:textColorPrimaryDisableOnly"
+                            android:text="All Request" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/AdminCustomButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:scaleType="fitCenter"
+                            android:padding="15dp"
+                            android:background="@drawable/shape_icon_gray"
+                            android:src="@drawable/allrequest" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:textColor="?android:textColorPrimaryDisableOnly"
+                            android:text="Coming Soon" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/adminAds"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="-10dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:gravity="center"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="left"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:textColor="?android:textColorPrimaryDisableOnly"
+                        android:text="Try more with 999App"
+                        />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/adminArticle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E6F7FF"
+    tools:context=".Family.FamilyMembers">
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/f_mapView"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+
+        android:layout_gravity="center" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="-40dp"
+        android:background="@drawable/top_corner_radious"
+        android:layout_gravity="center"
+        >
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:padding="25dp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:textColor="?android:textColorPrimaryDisableOnly"
+            android:text="Select a person  and click show to check his/her realtime location" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/familyMemberList"
+        android:layout_width="match_parent"
+        android:background="#E6F7FF"
+        android:layout_marginTop="-22dp"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="insideOverlay"
+        android:layout_height="190dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:background="#E6F7FF"
+        android:paddingBottom="-15dp"
+        android:orientation="horizontal"
+        >
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/f_show"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="25dp"
+            android:background="@drawable/round_button_black"
+            android:textColor="?android:textColorPrimaryInverse"
+            android:textSize="17dp"
+            android:text="Show" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
